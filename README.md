@@ -1,6 +1,6 @@
 # 🌟 Gelecek Hayalim - W-Code 2.0 Projem 🌈
 
-## 👩‍💻 Proje Adı:İklim Duyarlılığı
+## 👩‍💻 Proje Adı: İklim Duyarlılığı
 
 Merhaba!  
 Ben bu projeyi **Gelecek Hayalim - W-Code 2.0 FRONTEND WEB GELİŞTİRME** atölyesi kapsamında yaptım. Projemi HTML, CSS ve JavaScript kullanarak tasarladım. Kendi fikirlerimi kullanarak renkli, eğlenceli ve faydalı bir web sayfası oluşturdum. 🚀
