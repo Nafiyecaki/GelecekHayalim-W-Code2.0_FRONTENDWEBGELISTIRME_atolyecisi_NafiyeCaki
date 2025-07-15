@@ -1,4 +1,4 @@
-<img width="1918" height="992" alt="Ekran görüntüsü 2025-07-08 234006" src="https://github.com/user-attachments/assets/85142059-438e-4d19-9672-cbd28400c738" /><img width="1873" height="994" alt="Ekran görüntüsü 2025-07-16 012642" src="https://github.com/user-attachments/assets/b124ddfc-5f74-447d-8794-d3c389bd0525" /># 🌟 Gelecek Hayalim - W-Code 2.0 Projem 🌈
+# 🌟 Gelecek Hayalim - W-Code 2.0 Projem 🌈
 
 ## 👩‍💻 Proje Adı:İklim Duyarlılığı
 
