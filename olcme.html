@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Animasyonlu Karbon Ayak İzi Hesaplayıcı</title>
+  <style>
+    /* Reset */
+    * {
+      box-sizing: border-box;
+    }
+    body {
+      margin: 0; padding: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(135deg, #4caf50, #087f23);
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      overflow-x: hidden;
+    }
+    .container {
+      background: #ffffffee;
+      border-radius: 16px;
+      padding: 40px 50px;
+      width: 100%;
+      max-width: 480px;
+      box-shadow: 0 12px 35px rgba(0,0,0,0.25);
+      animation: fadeSlideIn 0.8s ease forwards;
+      opacity: 0;
+      transform: translateY(40px);
+    }
+    @keyframes fadeSlideIn {
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    h1 {
+      color: #2e7d32;
+      font-weight: 800;
+      text-align: center;
+      margin-bottom: 30px;
+      letter-spacing: 1.2px;
+      user-select: none;
+    }
+    form {
+      display: grid;
+      gap: 20px;
+    }
+    label {
+      font-weight: 700;
+      color: #2e7d32;
+      font-size: 1.1rem;
+      user-select: none;
+    }
+    input[type="number"] {
+      padding: 14px 16px;
+      font-size: 1rem;
+      border-radius: 12px;
+      border: 2px solid #a5d6a7;
+      transition: 0.3s ease;
+      outline: none;
+      box-shadow: none;
+      width: 100%;
+      font-weight: 600;
+      color: #1b5e20;
+      user-select: text;
+      background: #e8f5e9;
+    }
+    input[type="number"]:focus {
+      border-color: #4caf50;
+      box-shadow: 0 0 10px #4caf50aa;
+      transform: scale(1.03);
+      background: #d0f0c0;
+    }
+    button {
+      margin-top: 10px;
+      padding: 15px 0;
+      border: none;
+      border-radius: 14px;
+      background: linear-gradient(45deg, #388e3c, #81c784);
+      color: #fff;
+      font-weight: 800;
+      font-size: 1.25rem;
+      cursor: pointer;
+      box-shadow: 0 6px 15px rgba(56, 142, 60, 0.5);
+      transition: all 0.3s ease;
+      user-select: none;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+    }
+    button:hover {
+      background: linear-gradient(45deg, #81c784, #388e3c);
+      box-shadow: 0 8px 25px rgba(56, 142, 60, 0.7);
+      transform: scale(1.05);
+    }
+    button:active {
+      transform: scale(0.97);
+      box-shadow: 0 4px 10px rgba(56, 142, 60, 0.5);
+    }
+
+    .result {
+      margin-top: 35px;
+      background: #a5d6a7;
+      color: #1b5e20;
+      padding: 25px 20px;
+      font-weight: 700;
+      font-size: 1.4rem;
+      border-radius: 18px;
+      box-shadow: 0 8px 20px rgba(27, 94, 32, 0.5);
+      text-align: center;
+      user-select: none;
+      opacity: 0;
+      transform: scale(0.8);
+      pointer-events: none;
+      transition: opacity 0.4s ease, transform 0.4s ease;
+    }
+    .result.show {
+      opacity: 1;
+      transform: scale(1);
+      pointer-events: auto;
+    }
+    .result small {
+      font-weight: 400;
+      font-size: 0.85rem;
+      display: block;
+      margin-top: 8px;
+      color: #375a22;
+    }
+
+    /* Responsive */
+    @media (max-width: 500px) {
+      .container {
+        padding: 30px 25px;
+      }
+      h1 {
+        font-size: 1.8rem;
+      }
+      button {
+        font-size: 1.1rem;
+        padding: 13px 0;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Karbon Ayak İzi Hesaplayıcı</h1>
+    <form id="carbonForm" autocomplete="off" novalidate>
+      <label for="carKm">Günlük araba ile gidilen mesafe (km):</label>
+      <input type="number" id="carKm" min="0" step="0.1" placeholder="Örnek: 15" required />
+
+      <label for="electricity">Aylık elektrik tüketimi (kWh):</label>
+      <input type="number" id="electricity" min="0" step="0.1" placeholder="Örnek: 120" required />
+
+      <label for="naturalGas">Aylık doğalgaz tüketimi (m³):</label>
+      <input type="number" id="naturalGas" min="0" step="0.1" placeholder="Örnek: 30" required />
+
+      <label for="flightHours">Haftalık uçak yolculuğu süresi (saat):</label>
+      <input type="number" id="flightHours" min="0" step="0.1" placeholder="Örnek: 2" required />
+
+      <label for="wasteKg">Günlük atık miktarı (kg):</label>
+      <input type="number" id="wasteKg" min="0" step="0.1" placeholder="Örnek: 0.5" required />
+
+      <button type="submit">Hesapla</button>
+<button type="button" id="homeBtn">Anasayfaya Dön</button>    
+    </form>
+
+    <div class="result" id="result"></div>
+  </div>
+
+  <script>
+    const form = document.getElementById('carbonForm');
+    const resultDiv = document.getElementById('result');
+
+    form.addEventListener('submit', e => {
+      e.preventDefault();
+
+      const carKm = parseFloat(document.getElementById('carKm').value) || 0;
+      const electricity = parseFloat(document.getElementById('electricity').value) || 0;
+      const naturalGas = parseFloat(document.getElementById('naturalGas').value) || 0;
+      const flightHours = parseFloat(document.getElementById('flightHours').value) || 0;
+      const wasteKg = parseFloat(document.getElementById('wasteKg').value) || 0;
+
+      // Katsayılar (kg CO2 eşdeğeri, yıllık hesaplama)
+      const carEmission = carKm * 0.2 * 365;
+      const electricityEmission = electricity * 0.5 * 12;
+      const naturalGasEmission = naturalGas * 2.0 * 12;
+      const flightEmission = flightHours * 90 * 52;
+      const wasteEmission = wasteKg * 1.2 * 365;
+
+      const totalEmission = carEmission + electricityEmission + naturalGasEmission + flightEmission + wasteEmission;
+      const totalTon = (totalEmission / 1000).toFixed(2);
+
+      resultDiv.innerHTML = `
+        Yıllık tahmini karbon ayak iziniz: <br><span style="font-size:1.8rem; color:#2e7d32;">${totalTon} ton CO₂</span><br>
+        <small>(Yaklaşık değer, farklı kaynaklara göre değişebilir)</small>
+      `;
+      resultDiv.classList.add('show');
+
+      // Kaydırma (mobilde formu yukarıda tutmak için)
+      resultDiv.scrollIntoView({behavior: "smooth", block: "center"});
+    });
+    document.getElementById('homeBtn').addEventListener('click', () => {
+  window.location.href = 'index.html';
+});
+
+  </script>
+</body>
+</html>

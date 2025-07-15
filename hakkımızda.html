@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <title>Hakkımızda</title>
+    <link rel="stylesheet" href="styles/style.css" />
+    <style>
+   
+      /* Hakkımızda */
+      .about {
+        padding: 3rem 10%;
+        background: #ffffff;
+      }
+
+          .about .heading {
+   text-align: center;
+        font-size: 3rem;
+        margin-bottom: 3rem;
+        color: #000000;}
+
+.about .heading h1 {
+  font-size: 3rem;
+  margin-bottom:0;
+  font-weight: 700;
+}
+
+      .about .row {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 2rem;
+        align-items: center;
+        margin-bottom: 5rem;
+      }
+
+      .about .row .image {
+        flex: 1 1 45rem;
+      }
+
+      .about .row .image img {
+        width: 100%;
+        border-radius: 1.5rem;
+        box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+      }
+
+      .about .row .content {
+        flex: 1 1 45rem;
+      }
+
+      .about .row .content h3 {
+        font-size: 2rem;
+        color: #1b5e20;
+        margin-bottom: 1rem;
+      }
+
+      .about .row .content p {
+        font-size: 1.1rem;
+        color: #555;
+        line-height: 1.7;
+      }
+
+      .about .row .content .btn {
+        display: inline-block;
+        margin-top: 1.5rem;
+        padding: 0.8rem 1.5rem;
+        font-size: 1rem;
+        color: white;
+        background-color: #388e3c;
+        border-radius: 0.5rem;
+        text-decoration: none;
+        transition: 0.3s ease;
+      }
+
+      .about .row .content .btn:hover {
+        background-color: #2e7d32;
+        transform: scale(1.05);
+      }
+
+      .mission-vision {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        gap: 2rem;
+      }
+
+      .mission-vision .box {
+        flex: 1 1 30%;
+        background: #ffffff;
+        padding: 2rem;
+        border-radius: 1rem;
+        box-shadow: 0 0 15px rgba(0, 0, 0, 0.08);
+        text-align: center;
+        transition: 0.3s;
+      }
+
+      .mission-vision .box:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+      }
+
+      .mission-vision .box i {
+        font-size: 2.5rem;
+        color: #43a047;
+        margin-bottom: 1rem;
+      }
+
+      .mission-vision .box h4 {
+        font-size: 1.5rem;
+        color: #2e7d32;
+        margin-bottom: 0.8rem;
+      }
+
+      .mission-vision .box p {
+        font-size: 1rem;
+        color: #555;
+        line-height: 1.6;
+      }
+
+      /* Fotoğraf Arşivi */
+      .photo-archive {
+        padding: 4rem 10%;
+        background-color: #f0f8f4;
+        text-align: center;
+      }
+
+      .photo-archive h2 {
+        font-size: 2.5rem;
+        color: #2e7d32;
+        margin-bottom: 2.5rem;
+        font-weight: 700;
+        text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
+      }
+
+      .photo-grid {
+        display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3 sütun yapar */
+        gap: 1.5rem;
+      }
+
+      .photo-grid img {
+        width: 100%;
+        height: auto;
+        border-radius: 1rem;
+        box-shadow: 0 6px 25px rgba(0, 0, 0, 0.15);
+        transition: transform 0.5s ease, filter 0.5s ease, box-shadow 0.5s ease;
+        cursor: pointer;
+        will-change: transform;
+        position: relative;
+        z-index: 0;
+      }
+
+      /* Hover efekti: zoom, parlaklık artışı, hafif gölge ve döndürme */
+      .photo-grid img:hover {
+        transform: scale(1.1) rotate(3deg);
+        filter: brightness(1.2) saturate(1.1);
+        box-shadow: 0 15px 40px rgba(46, 125, 50, 0.4);
+        z-index: 10;
+        transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+      }
+
+      /* Hover sonrası yumuşak dönüş */
+      .photo-grid img:focus {
+        outline: none;
+        transform: scale(1.1) rotate(3deg);
+        filter: brightness(1.2) saturate(1.1);
+        box-shadow: 0 15px 40px rgba(46, 125, 50, 0.4);
+      }
+
+      @media (max-width: 768px) {
+        .about .row {
+          flex-direction: column;
+        }
+
+        .mission-vision {
+          flex-direction: column;
+        }
+  .photo-grid {
+    grid-template-columns: 1fr; /* Tablet ve altı: 1 sütun */
+  }
+        
+        .mission-vision .box {
+          flex: 1 1 100%;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+     <!--! header başlangıcı-->
+    <header class="header">
+      <a href="index.html" class="logo">
+        <img src="resimler/ChatGPT Image 9 Tem 2025 02_53_11.png" alt="logo" />
+        <a href="#" class="logo">
+          
+        </a>
+      </a>
+
+      <nav class="navbar">
+        <a href="index.html"> Anasayfa </a>
+        <a href="blog.html"> Blog</a>
+        <a href="haberler.html"> Haberler</a>
+        <a href="etkinlikler.html"> Etkinliklerimiz</a>
+        <a href="hakkımızda.html" class="active"> Hakkımızda</a>
+        <a href="iletisim.html">İletişim</a>
+      </nav>
+
+      <div class="buttons">
+        <button class="button" id="menu-btn">
+          <i class="fas fa-bars"></i>
+        </button>
+      </div>
+    </header>
+    <!--! header bitişi-->
+
+    <!-- Hakkımızda -->
+    <section class="about">
+      <h1 class="heading">HAKKIMIZDA</h1>
+      <div class="row">
+        <div class="image">
+          <img
+            src="resimler/vecteezy_asian-group-of-young-people-with-friends-backpacks-walking_5247529.jpg"
+            alt="Doğa Dostları Ekibi"
+          />
+        </div>
+        <div class="content">
+          <h3>GEZEGENİMİZ İÇİN BİR ARAYA GELDİK 🌿</h3>
+          <p>
+            Doğa Dostları olarak bizler, çevre bilincini yaymak ve
+            sürdürülebilir yaşam tarzlarını teşvik etmek için bir araya gelen
+            gönüllüleriz.
+          </p>
+          <p>
+            Projelerimiz; iklim değişikliğiyle mücadeleden atık azaltımına,
+            çevre dostu etkinliklerden eğitici oyunlara kadar uzanıyor.
+          </p>
+          <p>
+            Eğitim, oyun ve dayanışma ile daha yaşanabilir bir gezegen için
+            buradayız. Çünkü dünya hepimizin evi.
+          </p>
+          <a href="etkinlikler.html" class="btn">Etkinliklerimizi Keşfet</a>
+        </div>
+      </div>
+
+      <div class="mission-vision">
+        <div class="box">
+          <i class="fas fa-leaf"></i>
+          <h4>Misyonumuz</h4>
+          <p>
+            Toplumda çevre bilinci oluşturmak ve doğa dostu alışkanlıklar
+            kazandırmak.
+          </p>
+        </div>
+        <div class="box">
+          <i class="fas fa-seedling"></i>
+          <h4>Vizyonumuz</h4>
+          <p>
+            Gelecek nesillere temiz, yeşil ve yaşanabilir bir dünya bırakmak.
+          </p>
+        </div>
+        <div class="box">
+          <i class="fas fa-users"></i>
+          <h4>Topluluğumuz</h4>
+          <p>
+            Herkesin katılabildiği, büyüyen ve ilham veren bir gönüllü
+            topluluğuz.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Fotoğraf Arşivi -->
+    <section class="photo-archive">
+      <h2>📸 Fotoğraf Arşivimiz</h2>
+      <div class="photo-grid">
+        <img src="resimler/resim1.jpg" alt="Etkinlik 1" />
+        <img src="resimler/resim12.jpg" alt="Etkinlik 1" />
+        <img src="resimler/resim10.jpg" alt="Etkinlik 1" />
+        <img src="resimler/resim11.jpg" alt="Etkinlik 1" />
+        <img src="resimler/resim9.jpg" alt="Etkinlik 1" />
+        <img src="resimler/resim5.jpg" alt="Etkinlik 1" />
+        <img src="resimler/resim15.jpg" alt="Etkinlik 1" />
+        <img src="resimler/resim4.jpg" alt="Etkinlik 1" />
+        <img src="resimler/resim16.jpg" alt="Etkinlik 1" />
+        <img src="resimler/resim14.jpg" alt="Etkinlik 1" />
+        <img src="resimler/resim13.jpg" alt="Etkinlik 1" />
+        <img src="resimler/resim3.jpg" alt="Etkinlik 1" />
+      </div>
+    </section>
+
+    <!--! footer başlangıç-->
+    <footer class="modern-footer">
+      <div class="footer-wrapper">
+        <div class="footer-column">
+          <h3>🌱 Doğa Dostları</h3>
+          <p>
+            Daha yeşil bir dünya için gönüllülerle bir aradayız. Bilinçli
+            adımlar, sürdürülebilir gelecek demektir.
+          </p>
+        </div>
+
+        <div class="footer-column">
+          <h4>Menü</h4>
+          <ul>
+            <li><a href="index.html">Anasayfa</a></li>
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="haberler.html">Haberler</a></li>
+            <li><a href="etkinlikler.html">Etkinlikler</a></li>
+            <li><a href="hakkımızda.html">Hakkımızda</a></li>
+            <li><a href="iletisim.html">İletişim</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-column">
+          <h4>Sosyal Medya</h4>
+          <div class="footer-social">
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom-bar">
+        © 2025 Doğa Dostları. Tüm Hakları Saklıdır.
+      </div>
+    </footer>
+    <!--! footer bitiş-->
+
+    <button id="scrollTopBtn" title="Sayfanın en üstüne git">
+      <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <script src="js/script.js"></script>
+  </body>
+</html>

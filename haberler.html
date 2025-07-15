@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <title>Haberler</title>
+    <link rel="stylesheet" href="styles/style.css" />
+    <style>
+      :root {
+        --primary-color: #4361ee;
+        --secondary-color: #3f37c9;
+        --accent-color: #4cc9f0;
+        --dark-color: #ffffff;
+        --light-color: #f8f9fa;
+        --transition-speed: 0.3s;
+      }
+
+      body {
+        margin: 0;
+        padding: 0;
+        background-color: var(--dark-color);
+        color: var(--light-color);
+        font-family: Arial, sans-serif;
+        line-height: 1.6;
+      }
+      .page-banner {
+        text-align: center;
+        font-size: 3rem;
+        margin-bottom: 3rem;
+        color: #2e7d32;
+      }
+
+      .page-banner h1 {
+        font-size: 3rem;
+        margin-bottom: 0;
+        font-weight: 700;
+      }
+
+      #imageContainer1 {
+        margin-top: -30px; /* navbar ile üst resimler arası boşluk */
+        margin-bottom: 150px; /* resimler ile footer arası boşluk */
+      }
+
+      .gallery-title {
+        font-size: 3rem;
+        margin-bottom: 2rem;
+        color: var(--accent-color);
+        text-align: center;
+        text-shadow: 0 2px 4px rgba(255, 255, 255, 0.3);
+      }
+
+      .container1 {
+         width: 100%;
+  max-width: 1400px;
+  margin: 0 auto; /* Sayfanın ortasına hizalar */
+  padding: 0 2rem; /* Sağ ve soldan boşluk bırakır */
+  display: flex;
+  gap: 1rem;
+  height: 600px;
+        
+      }
+
+      .panel {
+        position: relative;
+        flex: 1;
+        border-radius: 20px;
+        cursor: pointer;
+        transition: flex var(--transition-speed) ease;
+        overflow: hidden;
+
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+      }
+
+      .panel.active {
+        flex: 5;
+      }
+
+      .panel img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition: transform var(--transition-speed) ease;
+      }
+
+      .panel.active img {
+        transform: scale(1.02);
+      }
+
+      .panel .content {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        padding: 2rem;
+        background: linear-gradient(to top, rgba(255, 255, 255, 0.8), transparent);
+        transform: translateY(100%);
+        transition: transform var(--transition-speed) ease;
+        color: white;
+      }
+
+      .panel.active .content {
+        transform: translateY(0);
+      }
+
+      .panel h3 {
+        font-size: 1.9rem;
+        margin-bottom: 0.5rem;
+        opacity: 0;
+        transition: opacity var(--transition-speed) ease 0.1s;
+      }
+
+      .panel.active h3 {
+        opacity: 1;
+      }
+
+      .panel .description {
+        font-size: 1.2rem;
+        margin-bottom: 1rem;
+        opacity: 0;
+        transition: opacity var(--transition-speed) ease 0.2s;
+      }
+
+      .panel.active .description {
+        opacity: 1;
+      }
+
+      .panel .tags {
+        display: flex;
+        gap: 0.5rem;
+        flex-wrap: wrap;
+        opacity: 0;
+        transition: opacity var(--transition-speed) ease 0.3s;
+      }
+
+      .panel.active .tags {
+        opacity: 1;
+      }
+
+      .tag {
+        background-color: var(--accent-color);
+        color: var(--dark-color);
+        padding: 0.3rem 0.8rem;
+        border-radius: 50px;
+        font-size: 1rem;
+        font-weight: 600;
+      }
+      .panel:hover {
+        flex: 5;
+      }
+
+      .panel:hover img {
+        transform: scale(1.02);
+      }
+
+      .panel:hover .content {
+        transform: translateY(0);
+      }
+
+      .panel:hover h3,
+      .panel:hover .description,
+      .panel:hover .tags {
+        opacity: 1;
+      }
+
+      @media (max-width: 768px) {
+        .gallery-title {
+          font-size: 2rem;
+          margin-bottom: 1.5rem;
+        }
+
+        .container1 {
+          flex-direction: column;
+          height: auto;
+        }
+
+        .panel {
+          width: 100%;
+          height: 120px;
+        }
+
+        .panel.active {
+          height: 350px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <!--! header başlangıcı-->
+    <header class="header">
+      <a href="index.html" class="logo">
+        <img src="resimler/ChatGPT Image 9 Tem 2025 02_53_11.png" alt="logo" />
+      </a>
+
+      <nav class="navbar">
+        <a href="index.html"> Anasayfa </a>
+        <a href="blog.html"> Blog</a>
+        <a href="haberler.html" class="active"> Haberler</a>
+        <a href="etkinlikler.html"> Etkinliklerimiz</a>
+        <a href="hakkımızda.html"> Hakkımızda</a>
+        <a href="iletisim.html">İletişim</a>
+      </nav>
+
+      <div class="buttons">
+        <button class="button" id="menu-btn">
+          <i class="fas fa-bars"></i>
+        </button>
+      </div>
+    </header>
+    <!--! header bitişi-->
+    <section class="page-banner">
+      <h1 class="heading">HABERLER</h1>
+      <div class="heading-underline"></div>
+    </section>
+
+    <div class="container1" id="imageContainer1">
+      <!-- Panels will be added dynamically -->
+    </div>
+
+  
+
+    <!--! footer başlangıç-->
+    <footer class="modern-footer">
+      <div class="footer-wrapper">
+        <div class="footer-column">
+          <h3>🌱 Doğa Dostları</h3>
+          <p>
+            Daha yeşil bir dünya için gönüllülerle bir aradayız. Bilinçli
+            adımlar, sürdürülebilir gelecek demektir.
+          </p>
+        </div>
+
+        <div class="footer-column">
+          <h4>Menü</h4>
+          <ul>
+            <li><a href="index.html">Anasayfa</a></li>
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="haberler.html">Haberler</a></li>
+            <li><a href="etkinlikler.html">Etkinlikler</a></li>
+            <li><a href="hakkımızda.html">Hakkımızda</a></li>
+            <li><a href="iletisim.html">İletişim</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-column">
+          <h4>Sosyal Medya</h4>
+          <div class="footer-social">
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom-bar">
+        © 2025 Doğa Dostları. Tüm Hakları Saklıdır.
+      </div>
+    </footer>
+    <!--! footer bitiş-->
+
+    <button id="scrollTopBtn" title="Sayfanın en üstüne git">
+      <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        // Expanded image data with more images
+        const imageData = [
+          {
+            id: 1,
+            title:
+              " Bilim insanları uyardı: 2070’lerde her yıl 30.000 kişi sıcaklık nedeniyle ölebilir",
+            description:
+              "İngiltere ve Galler'de iklim değişikliğine bağlı sıcaklıklar 2070’lerde ölüm oranlarını altı kat artırabilir. UCL tarafından yapılan çalışma, iklim duyarlılığı yüksek senaryolarda 34.000’e varan ölüm riski olduğunu öngörüyor.",
+            imageUrl: "resimler/haber1.avif",
+            tags: [" The Guardian"],
+          },
+          {
+            id: 2,
+            title:
+              " Avrupa’daki Haziran sıcak dalgası, iklim kaynaklı ölümleri üç kat artırdı",
+            description:
+              "World Weather Attribution’a göre 2025 Haziran ayında yaşanan sıcak hava dalgasında 2.300 kişi öldü; bunun 1.500’ü iklim değişikliğine bağlandı.",
+            imageUrl: "resimler/haber2.avif",
+            tags: [" The Guardian"],
+          },
+          {
+            id: 3,
+            title:
+              "Fosil yakıtlar, Avrupa’daki sıcak dalgasında 1.500 ölüme neden oldu",
+            description:
+              "Bilimsel analizler, aşırı sıcakların insan kaynaklı iklim değişikliğine bağlı olduğunu ve büyük bölümünün fosil yakıt emisyonları nedeniyle olduğunu gösterdi.",
+            imageUrl: "resimler/haber3.webp",
+            tags: ["AP News"],
+          },
+          {
+            id: 4,
+            title:
+              "Küresel sera gazı birikimi rekor kırıyor, 1.5 °C sınırı 2028'de aşılabilir",
+            description:
+              "Yeni analiz, mevcut emisyon düzeylerinin devam etmesi durumunda 1.5 derece sınırının sadece 3 yıl içinde geçileceğini ortaya koydu.",
+            imageUrl: "resimler/haber4.jpg",
+            tags: ["AP News"],
+          },
+          {
+            id: 5,
+            title: " İklim duyarlılığı tahminleri netleşiyor: Ortalama 2.16 °C",
+            description:
+              "Yeni meta-analiz, iklim duyarlılığı (CO₂ artışı karşısında sıcaklık artışı) için 1.55 °C ile 3.2 °C aralığını öneriyor. Bu, önceki geniş tahminlere göre daha kesin.",
+            imageUrl: "resimler/haber55.jpg",
+            tags: ["  Springer Climate Dynamics"],
+          },
+          {
+            id: 6,
+            title: "Bulutlar, iklim tahminlerinde belirsizlik yaratıyor",
+            description:
+              "Bilim insanlarına göre bulut oluşumu, iklim duyarlılığı hesaplamalarında en karmaşık faktör. Uydu verileri ile model karşılaştırmaları hâlâ sürüyor.",
+            imageUrl: "resimler/pexels-pixabay-53594.jpg",
+            tags: [" Phys.org"],
+          },
+          {
+            id: 7,
+            title: " Yeni modellerdeki yüksek sıcaklık tahminleri sorgulanıyor",
+            description:
+              "CMIP6 iklim modellerinin bazıları 5 °C üzeri sıcaklık öngörürken, yeni analizler bunun gerçekçi olmayabileceğini söylüyor.",
+            imageUrl: "resimler/haber7.jpg",
+            tags: ["Princeton University"],
+          },
+          {
+            id: 8,
+            title:
+              " James Hansen: İklim duyarlılığı beklenenden %50 daha yüksek olabilir",
+            description:
+              "NASA'nın eski baş iklim bilimcisi James Hansen, aerosollerin etkisi azaldıkça iklimin daha hızlı ısındığını ve duyarlılığın ≈ 4.5 °C’ye kadar çıkabileceğini ifade etti.",
+            imageUrl: "resimler/haber8.webp",
+            tags: ["Houston Chronicle"],
+          },
+          {
+            id: 9,
+            title: "CO₂’nin etkisi sabit değil: Duruma göre değişiyor",
+            description: "Bilgisayar modelleri, CO₂ artışının her durumda aynı sıcaklık artışını yapmadığını, atmosferin mevcut durumuna bağlı olarak değişkenlik gösterdiğini ortaya koydu.",
+            imageUrl: "resimler/haber9.jpg",
+            tags: ["arXiv"],
+          },
+          {
+            id: 10,
+            title:
+              "Bilim insanları: Felaketi önlemek için emisyonları 5 yılda yarıya indirmeliyiz",
+            description:
+              "Exeter Üniversitesi liderliğindeki araştırmaya göre, 1.5 °C hedefini korumak için emisyonların 2025'ten itibaren her 5 yılda %50 azaltılması gerekiyor.",
+            imageUrl: "resimler/haber10.avif",
+            tags: ["Reuters"],
+          },
+        ];
+
+        // Render images
+        function renderImages() {
+          const container1 = document.getElementById("imageContainer1");
+
+          imageData.forEach((item) => {
+            const panel = document.createElement("div");
+            panel.className = "panel";
+            panel.dataset.id = item.id;
+
+            panel.innerHTML = `
+                <img src="${item.imageUrl}" alt="${item.title}">
+                <div class="content">
+                    <h3>${item.title}</h3>
+                    <p class="description">${item.description}</p>
+                    <div class="tags">
+                        ${item.tags
+                          .map((tag) => `<span class="tag">${tag}</span>`)
+                          .join("")}
+                    </div>
+                </div>
+            `;
+
+            panel.addEventListener("click", function () {
+              // If this panel is already active, collapse it
+              if (this.classList.contains("active")) {
+                this.classList.remove("active");
+              } else {
+                // Collapse all panels
+                document.querySelectorAll(".panel").forEach((p) => {
+                  p.classList.remove("active");
+                });
+                // Expand this panel
+                this.classList.add("active");
+              }
+            });
+
+            container1.appendChild(panel);
+          });
+        }
+
+        // Initialize the app
+        renderImages();
+      });
+
+      //!menü btn
+      const menuBtn = document.querySelector("#menu-btn");
+      const navbar = document.querySelector(".navbar");
+
+      // Menü butonuna tıklayınca navbar aç/kapa
+      menuBtn.addEventListener("click", (e) => {
+        e.stopPropagation(); // Tıklamanın document listener'a yayılmasını engelle
+        navbar.classList.toggle("active");
+      });
+
+      // Sayfaya herhangi bir yere tıklanınca
+      document.addEventListener("click", (e) => {
+        // Eğer tıklama menü butonu veya navbar içinde değilse menüyü kapat
+        if (
+          !e.composedPath().includes(menuBtn) &&
+          !e.composedPath().includes(navbar)
+        ) {
+          navbar.classList.remove("active");
+        }
+      });
+    </script>
+  </body>
+</html>

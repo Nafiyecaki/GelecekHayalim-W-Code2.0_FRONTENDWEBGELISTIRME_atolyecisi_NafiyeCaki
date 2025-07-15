@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Etkinlik Başvuru Formu</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: #f1f1f1;
+      margin: 0;
+      padding: 0;
+    }
+    .container {
+      max-width: 600px;
+      margin: 40px auto;
+      background: #ffffff;
+      border-radius: 15px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      padding: 30px;
+    }
+    h1 {
+      text-align: center;
+      color: #2e7d32;
+      margin-bottom: 10px;
+    }
+    p {
+      text-align: center;
+      color: #555;
+      font-size: 15px;
+    }
+    label {
+      display: block;
+      margin-top: 20px;
+      font-weight: 600;
+      color: #333;
+    }
+    input, select, textarea {
+      width: 100%;
+      padding: 10px;
+      margin-top: 6px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      font-size: 14px;
+    }
+    input[type="checkbox"] {
+      width: auto;
+      margin-right: 10px;
+    }
+    button {
+      width: 100%;
+      background-color: #43a047;
+      color: white;
+      padding: 14px;
+      border: none;
+      border-radius: 10px;
+      font-size: 16px;
+      margin-top: 30px;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #388e3c;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>🌿 Etkinlik Başvuru Formu</h1>
+   
+
+    <form id="basvuruFormu">
+      <label>Başvurmak istediğiniz etkinlik</label>
+      <select id="etkinlikSecimi" required>
+        <option value="" disabled selected>Etkinlik seçin</option>
+        <option>Doğa Yürüyüşü - 22 Eylül 2025</option>
+        <option>Doğamızı Temizleme Etkinliği - 16 Temmuz 2025</option>
+        <option>Tanışma Etkinliği - 05 Ağustos 2025</option>
+        <option>Kamp Etkinliği - 12-14 Eylül 2025</option>
+        <option>Ağaç Dikme Etkinliği - 20 Eylül 2025</option>
+        <option>Geri Dönüşüm Atölyesi - 28 Eylül 2025</option>
+      </select>
+
+      <label>Adınız Soyadınız</label>
+      <input type="text" required />
+
+      <label>Doğum Tarihi</label>
+      <input type="date" required />
+
+      <label>E-posta Adresiniz</label>
+      <input type="email" required />
+
+      <label>Telefon Numaranız</label>
+      <input type="tel" required />
+
+      <label>Acil Durumda Aranacak Kişi (Ad Soyad & Tel)</label>
+      <input type="text" required />
+
+      <label>Daha önce doğa yürüyüşüne katıldınız mı?</label>
+      <select>
+        <option>Evet</option>
+        <option>Hayır</option>
+      </select>
+
+      <label>Etkinlikten beklentileriniz</label>
+      <textarea rows="3"></textarea>
+
+      <label>Gıda tercihiniz</label>
+      <select>
+        <option>Standart</option>
+        <option>Vejetaryen</option>
+        <option>Vegan</option>
+        <option>Belirtmek istemiyorum</option>
+      </select>
+
+      <label>Açıklamalar / Sağlık Bilgileri</label>
+      <textarea rows="3"></textarea>
+
+      <button type="submit">📨 Başvuruyu Gönder</button>
+    </form>
+  </div>
+
+  <script>
+    document.getElementById("basvuruFormu").addEventListener("submit", function(e) {
+      e.preventDefault();
+
+      const secilenEtkinlik = document.getElementById("etkinlikSecimi").value;
+
+      if (!secilenEtkinlik) {
+        alert("Lütfen bir etkinlik seçin.");
+        return;
+      }
+
+      alert(`Başvurunuz "${secilenEtkinlik}" etkinliği için alınmıştır. Teşekkür ederiz!`);
+
+      // Başarılı başvurudan sonra yönlendirme
+      window.location.href = "etkinlikler.html";
+    });
+  </script>
+</body>
+</html>

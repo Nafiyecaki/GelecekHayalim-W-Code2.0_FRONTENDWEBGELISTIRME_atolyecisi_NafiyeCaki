@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <title>Blog</title>
+    <link rel="stylesheet" href="styles/style.css" />
+    <style>
+      
+/*! blog sayfası ayrı kod başlangıcı */
+
+        .page-banner {
+   text-align: center;
+        font-size: 3rem;
+        margin-bottom: -3rem;
+        color: #2e7d32;}
+
+.page-banner h1 {
+  font-size: 3rem;
+  margin-bottom:0;
+  font-weight: 700;
+}
+
+
+.blog-container {
+  display: flex;
+  flex-direction: column;
+  gap: 8rem;
+  padding: 6rem 10%;
+  background: linear-gradient(135deg, #ffffff, #ffffff);
+  font-family: 'Poppins', sans-serif;
+}
+
+.blog-entry {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 4rem;
+  padding: 3rem;
+  border-radius: 2rem;
+  overflow: hidden;
+  background: rgba(255, 255, 255, 0.15);
+  box-shadow: 0 8px 32px rgba(31, 38, 135, 0.2);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.blog-entry:hover {
+  transform: scale(1.03) rotateZ(-0.3deg);
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.15);
+}
+
+.blog-entry.reverse {
+  flex-direction: row-reverse;
+}
+
+
+@keyframes float {
+  0%, 100% { transform: translateY(0) rotate(0deg); }
+  50% { transform: translateY(10px) rotate(1deg); }
+}
+
+.blog-image {
+  flex: 1;
+  max-width: 35%;
+  z-index: 2;
+}
+
+.blog-image img {
+  width: 100%;
+  height: auto;
+  border-radius: 1.5rem;
+  object-fit: cover;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.blog-image img:hover {
+  transform: scale(1.05) rotateZ(1deg);
+}
+
+.blog-text {
+  flex: 1;
+  z-index: 2;
+  position: relative;
+  color: #333;
+}
+
+.blog-text h2 {
+  font-size: 2.2rem;
+  margin-bottom: 1rem;
+  background: linear-gradient(to right, #5d9059, #dbec7d);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.blog-text p {
+  font-size: 1.2rem;
+  line-height: 1.8;
+  margin-bottom: 1.5rem;
+  color: #444;
+}
+
+.link-arrow {
+  display: inline-block;
+  color: #5d9059;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1.1rem;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.link-arrow::after {
+  content: "→";
+  position: absolute;
+  right: -22px;
+  transition: all 0.3s ease;
+  opacity: 0.7;
+}
+
+.link-arrow:hover {
+  color: #5d9059;
+  transform: translateX(3px);
+}
+
+.link-arrow:hover::after {
+  right: -28px;
+  opacity: 1;
+}
+   
+
+/*!   blog sayfası ayrı kod bitiş*/
+    </style>
+  </head>
+  <body>
+   <!--! header başlangıcı-->
+    <header class="header">
+      <a href="index.html" class="logo">
+        <img src="resimler/ChatGPT Image 9 Tem 2025 02_53_11.png" alt="logo" />
+        <a href="#" class="logo">
+          
+        </a>
+      </a>
+
+      <nav class="navbar">
+        <a href="index.html"> Anasayfa </a>
+        <a href="#blog.html" class="active"> Blog</a>
+        <a href="haberler.html"> Haberler</a>
+        <a href="etkinlikler.html"> Etkinliklerimiz</a>
+        <a href="hakkımızda.html"> Hakkımızda</a>
+        <a href="iletisim.html">İletişim</a>
+      </nav>
+
+      <div class="buttons">
+        <button class="button" id="menu-btn">
+          <i class="fas fa-bars"></i>
+        </button>
+      </div>
+    </header>
+    <!--! header bitişi-->
+  
+<section class="page-banner">
+ <h1 class="heading"><span>BLOG </span></h1></section>
+  </div>
+</section>
+    <main class="blog-container">
+      <!-- Görsel solda, yazı sağda -->
+      <div class="blog-entry">
+        <div class="blog-image">
+          <img src="resimler/ClimateMapWorld.png" alt="Görsel 1" />
+        </div>
+        <div class="blog-text">
+          <h2>İklim Nedir?</h2>
+          <p>
+            İklim, bir yerde uzun bir süre boyunca gözlemlenen sıcaklık, nem,
+            hava basıncı, rüzgâr, yağış, yağış şekli gibi meteorolojik olayların
+            ortalamasına verilen addır. Hava durumundan farklı olarak iklim, bir
+            yerin meteorolojik olaylarını uzun süreler içinde gözlemler. Bir
+            yerin iklimi o yerin enlemine, yükseltisine, yer şekillerine, kalıcı
+            kar durumuna ve denizlere olan uzaklığına bağlıdır.
+          </p>
+          <a href="iklim-nedir.html" class="link-arrow">Blogun Devamı...</a>
+        </div>
+      </div>
+
+      <!-- Görsel sağda, yazı solda -->
+      <div class="blog-entry reverse">
+        <div class="blog-image">
+          <img
+            src="resimler/6641f6765356835fb23044ef_Iklim_Krizi_ve_Etkileri_Neler_Yapilabilir.jpg"
+            alt="Görsel 2"
+          />
+        </div>
+        <div class="blog-text">
+          <h2>İklim Krizi ve Etkileri</h2>
+          <p>
+            İklim krizi, dünya genelinde atmosferde meydana gelen dengesiz
+            değişiklikler ve bunların ekosistem üzerindeki muzır etkilerini
+            kapsayan geniş çaplı bir çevresel tehdittir. Temelinde, atmosfer
+            değişiklikleri yatan kriz, uzun dönemsel iklim modellerindeki
+            anormal sapmalar olarak tanımlanabilir. Sanayi devrimiyle birlikte
+            küresel ısınmanın başlangıcı ve artan sera gazı emisyonları ile
+            ilişkilendirilen iklim krizi, bugüne dek gezegenin birçok bölgesinde
+            ciddi iklim olaylarının yaşanmasına zemin hazırlamıştır.
+          </p>
+          <a href="iklim-krizi-nedir.html" class="link-arrow"
+            >Blogun Devamı...</a
+          >
+        </div>
+      </div>
+
+      <!-- Görsel solda, yazı sağda -->
+      <div class="blog-entry">
+        <div class="blog-image">
+          <img src="resimler/fosilyakıtlar.webp" alt="Görsel 1" />
+        </div>
+        <div class="blog-text">
+          <h2>Küresel İklim Değişikliğinin Ana Sebepleri</h2>
+          <p>
+            İklim değişikliğinin nedenlerini temelde iki ana başlık altında
+            inceleyebiliriz: insan kaynaklı sebepler ve doğal sebepler. Ancak,
+            günümüzde yaşadığımız hızlı değişimin en büyük tetikleyicisinin
+            insan faaliyetleri olduğu bilinen bir gerçektir.
+          </p>
+          <a href="iklim-krizi-sebepleri.html" class="link-arrow"
+            >Blogun Devamı...</a
+          >
+        </div>
+      </div>
+
+      <!-- Görsel sağda, yazı solda -->
+      <div class="blog-entry reverse">
+        <div class="blog-image">
+          <img src="resimler/surdurulebilirlik.webp" alt="Görsel 2" />
+        </div>
+        <div class="blog-text">
+          <h2>Sürdürülebilirlik Nedir?</h2>
+          <p>
+            Sürdürülebilirlik daimi olma yeteneği olarak adlandırılabilir. 21.
+            yüzyılda genel olarak biyosfer ve uygarlığın bu yeteneğine atfen
+            kullanılır. Aynı zamanda, kaynakların sömürülmesi, yatırımların
+            yönü, teknolojik gelişmenin yönlendirilmesi ve kurumsal değişimin
+            uyum içinde olduğu ve insan ihtiyaçlarını ve isteklerini
+            karşılayabilme potansiyelinin hem günümüzde hem de gelecek için
+            korunduğu dengeli bir ortamda değişimin sağlanması olarak
+            tanımlanabilir.
+          </p>
+          <a href="surdurulebilirlik.html" class="link-arrow"
+            >Blogun Devamı...</a
+          >
+        </div>
+      </div>
+
+      <!-- Görsel solda, yazı sağda -->
+      <div class="blog-entry">
+        <div class="blog-image">
+          <img
+            src="resimler/gratisography-299H-free-stock-photo-800x525.jpg"
+            alt="Görsel 1"
+          />
+        </div>
+        <div class="blog-text">
+          <h2>İklim Duyarlılığı Nedir?</h2>
+          <p>
+            İklim duyarlılığı, Dünya atmosferinin sera gazı artışına verdiği
+            tepkiyi tanımlayan bilimsel bir kavramdır. Daha spesifik olarak,
+            atmosferdeki karbondioksit (CO₂) miktarının iki katına çıkması
+            durumunda, yeryüzündeki ortalama sıcaklıkların ne kadar artacağını
+            ifade eder. Bu artış genellikle 1.5°C ile 4.5°C arasında tahmin
+            edilmektedir.
+          </p>
+          <a href="iklim-duyarliligi-nedir.html" class="link-arrow"
+            >Blogun Devamı...</a
+          >
+        </div>
+      </div>
+
+      <!-- Görsel sağda, yazı solda -->
+      <div class="blog-entry reverse">
+        <div class="blog-image">
+          <img src="resimler/hava-kirliligi-nedir.jpg" alt="Görsel 2" />
+        </div>
+        <div class="blog-text">
+          <h2>Çevresel Farkındalık Nasıl Artırılır?</h2>
+          <p>
+            Çevresel farkındalık, bireylerin ve toplumların çevre sorunlarını
+            tanıması, bunlara duyarlı hale gelmesi ve doğaya zarar vermeyen
+            davranışlar geliştirmesi anlamına gelir. Bu farkındalığı artırmak,
+            sürdürülebilir bir gelecek için atılması gereken en önemli
+            adımlardan biridir.
+          </p>
+          <a href="cevresel-farkindalik.html" class="link-arrow"
+            >Blogun Devamı...</a
+          >
+        </div>
+      </div>
+      <!-- Görsel solda, yazı sağda -->
+      <div class="blog-entry">
+        <div class="blog-image">
+          <img src="resimler/736481Image1.jpg" alt="Görsel 1" />
+        </div>
+        <div class="blog-text">
+          <h2>İklim Duyarlılığı için Teknolojik Çözümler</h2>
+          <p>
+            İklim değişikliği, günümüzde insanlığın karşı karşıya olduğu en
+            büyük çevresel tehditlerden biridir. Küresel ısınma, deniz
+            seviyelerinin yükselmesi, ekstrem hava olaylarının artması gibi
+            sonuçlar, iklim krizinin ciddiyetini ortaya koymaktadır. Bu krize
+            karşı yalnızca bireysel farkındalık yeterli olmayabilir; aynı
+            zamanda teknoloji destekli çözümlere de ihtiyaç vardır.
+          </p>
+          
+          <a href="iklim-teknoloji.html" class="link-arrow">Blogun Devamı...</a>
+        </div>
+      </div>
+
+      <!-- Görsel sağda, yazı solda -->
+      <div class="blog-entry reverse">
+        <div class="blog-image">
+          <img src="resimler/green-marketing.jpg" alt="Görsel 2" />
+        </div>
+        <div class="blog-text">
+          <h2>Bireysel Olarak Ne Yapabiliriz?</h2>
+          <p>
+            İklim değişikliği, sadece hükümetlerin veya büyük şirketlerin
+            çözeceği bir sorun değildir. Her bireyin günlük yaşamında yapacağı
+            küçük ama etkili değişiklikler, büyük farklar yaratabilir. Bireysel
+            sorumluluk bilinciyle atılacak adımlar, çevre üzerindeki baskıyı
+            azaltabilir ve daha sürdürülebilir bir gelecek için katkı
+            sağlayabilir.
+          </p>
+          <a href="bireysel.html" class="link-arrow">Blogun Devamı...</a>
+        </div>
+      </div>
+
+      <!-- Görsel solda, yazı sağda -->
+      <div class="blog-entry">
+        <div class="blog-image">
+          <img src="resimler/karbon-ayak-izi-img.jpg" alt="Görsel 1" />
+        </div>
+        <div class="blog-text">
+          <h2>Karbon Ayak İzi Nedir?</h2>
+          <p>
+            Karbon ayak izi, birim karbondioksit cinsinden ölçülen, üretilen
+            sera gazı miktarı açısından insan faaliyetlerinin çevreye verdiği
+            zararın ölçüsüdür ve iki ana parçadan oluşur: doğrudan (birincil)
+            ayak izi ve dolaylı (ikincil) ayak izi. Birincil ayak izi, evsel
+            enerji tüketimi ve ulaşım (söz gelimi araba ve uçak) dahil olmak
+            üzere fosil yakıtlarının yanmasından ortaya çıkan doğrudan CO2
+            emisyonlarının, ikincil ayak izi ise kullandığımız ürünlerin tüm
+            yaşamın döngüsünden bu ürünlerin imalatı ve en sonunda
+            bozulmalarıyla ilgili olan dolaylı CO2 emisyonlarının ölçüsüdür.
+          </p>
+          <a href="karbon-ayak-izi.html" class="link-arrow">Blogun Devamı...</a>
+        </div>
+      </div>
+
+      <!-- Görsel sağda, yazı solda -->
+      <div class="blog-entry reverse">
+        <div class="blog-image">
+          <img src="resimler/Greenhouse-effect-t2.svg" alt="Görsel 2" />
+        </div>
+        <div class="blog-text">
+          <h2>Sera Gazları Nedir?</h2>
+          <p>
+            Sera gazları, Dünya'nın yüzeyi, atmosferi ve bulutları tarafından
+            yayılan kızılötesi radyasyon spektrumu dahilinde belirli dalga
+            boylarındaki radyasyonu emen ve yayan, atmosferin hem doğal hem de
+            antropojenik gaz hâlindeki bileşenleridir. Bu özellikleri nedeniyle,
+            sera etkisine neden olurlar. Su buharı (H2O), karbondioksit (CO2),
+            nitröz oksit (N2O), metan (CH4) ve ozon (O3) başlıca sera
+            gazlarıdır.[1] Sera gazları olmadan, Dünya yüzeyinin ortalama
+            sıcaklığı mevcut ortalama olan 15 °C yerine yaklaşık -18 °C olurdu
+          </p>
+          <a href="sera-gazlar.html" class="link-arrow"
+            >Blogun Devamı...</a
+          >
+        </div>
+      </div>
+    </main>
+
+    <!--! footer başlangıç-->
+    <footer class="modern-footer">
+      <div class="footer-wrapper">
+        <div class="footer-column">
+          <h3>🌱 Doğa Dostları</h3>
+          <p>
+            Daha yeşil bir dünya için gönüllülerle bir aradayız. Bilinçli
+            adımlar, sürdürülebilir gelecek demektir.
+          </p>
+        </div>
+
+        <div class="footer-column">
+          <h4>Menü</h4>
+          <ul>
+            <li><a href="index.html">Anasayfa</a></li>
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="haberler.html">Haberler</a></li>
+            <li><a href="etkinlikler.html">Etkinlikler</a></li>
+            <li><a href="hakkımızda.html">Hakkımızda</a></li>
+            <li><a href="iletisim.html">İletişim</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-column">
+          <h4>Sosyal Medya</h4>
+          <div class="footer-social">
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom-bar">
+        © 2025 Doğa Dostları. Tüm Hakları Saklıdır.
+      </div>
+    </footer>
+    <!--! footer bitiş-->
+
+    <button id="scrollTopBtn" title="Sayfanın en üstüne git">
+      <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <script src="js/script.js"></script>
+  </body>
+</html>

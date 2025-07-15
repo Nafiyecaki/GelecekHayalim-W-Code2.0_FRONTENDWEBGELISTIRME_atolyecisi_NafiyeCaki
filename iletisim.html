@@ -1,0 +1,483 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    
+    <link rel="stylesheet" href="styles/style.css" />
+    <title>İletişim</title>
+    <style>
+      
+.contact-bg {
+  height: 35vh;
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(255, 255, 255, 0.8)),
+    url(image/contact-bg.jpg);
+  background-position: 50% 100%;
+  text-align: center;
+  color: #000000;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.contact-bg h3 {
+  font-size: 1.5rem;
+  font-weight: 400;
+}
+
+.contact-bg h2 {
+  font-size: 3rem;
+  text-transform: uppercase;
+  padding: 0.4rem 0;
+  letter-spacing: 4px;
+}
+
+.line {
+  display: flex;
+  align-items: center;
+}
+
+.line div {
+  margin: 0 0.2rem;
+}
+
+.line div:nth-child(1),
+.line div:nth-child(3) {
+  height: 3px;
+  width: 70px;
+  background: #327b34;
+  border-radius: 5px;
+}
+
+.line div:nth-child(2) {
+  width: 10px;
+  height: 10px;
+  background: #327b34;
+  border-radius: 50%;
+}
+
+.text {
+  font-weight: 1000;
+  opacity: 0.9;
+}
+
+.contact-bg .text {
+  margin: 1.6rem 0;
+}
+
+.contact-body {
+  max-width: 1520px;
+  margin: 0 auto;
+  padding: 0 6rem;
+}
+
+.contact-info {
+  margin: 2rem 0;
+  text-align: center;
+  padding: 2rem 0;
+}
+
+.contact-info span {
+  display: block;
+}
+
+.contact-info div {
+  margin: 0.8rem 0;
+  padding: 1rem;
+}
+
+.contact-info span .fas {
+  font-size: 3rem;
+  padding-bottom: 0.9rem;
+  color: #327b34;
+}
+
+.contact-info div span:nth-child(2) {
+  font-weight: 500;
+  font-size: 1.5rem;
+}
+
+.contact-info .text {
+  padding-top: 1rem;
+}
+
+.contact-form {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 8rem;
+  padding: 3rem 0;
+  border-top: 1px solid #c7c7c7;
+}
+
+
+.contact-form form {
+  flex: 1 1 500px;
+  max-width: 600px;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+
+  /* Kutu stili için eklediklerimiz */
+  background-color: #ffffff; /* Açık gri arka plan */
+  border: 1px solid #ddd; /* İnce çerçeve */
+  border-radius: 10px;
+  padding: 2rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08); /* Hafif gölge */
+}
+
+
+.contact-form form div {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  column-gap: 0.6rem;
+}
+
+.form-control {
+  width: 100%;
+  border: 1.5px solid #c7c7c7;
+  border-radius: 5px;
+  padding: 1rem;
+  margin: 1rem 0;
+  font-size: 1.1rem;
+  outline: none;
+}
+
+.form-control:focus {
+  box-shadow: 0 0 6px -3px rgba(48, 48, 48, 1);
+}
+
+.send-btn {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 1rem;
+  text-transform: uppercase;
+  color: #fff;
+  background: #5b995f;
+  border: none;
+  border-radius: 5px;
+  padding: 0.7rem 1.5rem;
+  cursor: pointer;
+  transition: all 0.4s ease;
+  align-self: flex-start;
+}
+
+.send-btn:hover {
+  opacity: 0.8;
+}
+
+.contact-form > div:last-child {
+  flex: 1 1 400px;
+  max-width: 500px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.contact-form > div:last-child img {
+  width: 100%;
+  height: auto;
+  max-height: 100%;
+  object-fit: cover;
+  border-radius: 10px;
+  display: block;
+}
+
+.social-links {
+  display: flex;
+  justify-content: center;
+}
+
+.social-links a {
+  text-decoration: none;
+  width: 40px;
+  height: 40px;
+  color: #fff;
+  border: 2px solid #fff;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0.4rem;
+  transition: all 0.4s ease;
+}
+
+.social-links a:hover {
+  color: #327b34;
+  border-color: #327b34;
+}
+
+.map {
+  width: 100%;
+  overflow: hidden;
+}
+
+.map iframe {
+  width: 100%;
+  height: 350px;
+  border: 0;
+}
+
+/* Responsive */
+
+@media screen and (min-width: 768px) {
+  .contact-bg .text {
+    width: 70%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .contact-info {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .contact-bg .text {
+    width: 50%;
+  }
+
+  .contact-form {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .contact-info {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+    </style>
+  </head>
+  <body>
+  <!--! header başlangıcı-->
+    <header class="header">
+      <a href="index.html" class="logo">
+        <img src="resimler/ChatGPT Image 9 Tem 2025 02_53_11.png" alt="logo" />
+        <a href="#" class="logo">
+          
+        </a>
+      </a>
+
+      <nav class="navbar">
+        <a href="index.html"> Anasayfa </a>
+        <a href="blog.html"> Blog</a>
+        <a href="haberler.html"> Haberler</a>
+        <a href="etkinlikler.html"> Etkinliklerimiz</a>
+        <a href="hakkımızda.html" > Hakkımızda</a>
+        <a href="iletisim.html" class="active">İletişim</a>
+      </nav>
+
+      <div class="buttons">
+        <button class="button" id="menu-btn">
+          <i class="fas fa-bars"></i>
+        </button>
+      </div>
+    </header>
+    <!--! header bitişi-->
+ <section class="contact-section">
+  <div class="contact-bg">
+    <h3>Bizimle Bağlantı Kurun</h3>
+    <h2>İLETİŞİME GEÇ</h2>
+    <div class="line">
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
+    <p class="text">
+      Çevreye duyarlı bir toplum için siz de bizimle iletişime geçin. Fikirlerinizi ve önerilerinizi duymaktan memnuniyet duyarız.
+    </p>
+  </div>
+
+  <div class="contact-body">
+    <div class="contact-info">
+      <div>
+        <span><i class="fas fa-mobile-alt"></i></span>
+        <span>Telefon</span>
+        <span class="text">+90 555 555 55 55</span>
+      </div>
+      <div>
+        <span><i class="fas fa-envelope-open"></i></span>
+        <span>E-posta</span>
+        <span class="text">iletisim@dogadostlari.org</span>
+      </div>
+      <div>
+        <span><i class="fas fa-map-marker-alt"></i></span>
+        <span>Adres</span>
+        <span class="text">Cumhuriyet Meydanı, Kayseri</span>
+      </div>
+      <div>
+        <span><i class="fas fa-clock"></i></span>
+        <span>Çalışma Saatleri</span>
+        <span class="text">Pazartesi - Cuma (09:00 - 17:00)</span>
+      </div>
+    </div>
+
+    <div class="contact-form">
+     <form id="contactForm">
+  <div>
+    <input type="text" class="form-control" placeholder="Adınız" required>
+    <input type="text" class="form-control" placeholder="Soyadınız" required>
+  </div>
+
+  <div>
+    <input type="email" class="form-control" placeholder="E-posta Adresiniz" required>
+    <input type="tel" class="form-control" placeholder="Telefon Numaranız" required>
+  </div>
+
+  <div>
+    <select class="form-control" required>
+      <option value="">Şehrinizi Seçin</option>
+      <option value="İstanbul">İstanbul</option>
+      <option value="Ankara">Ankara</option>
+      <option value="İzmir">İzmir</option>
+     <option value="Kayseri">Kayseri</option>
+      <option value="Konya">Antalya</option>
+      <option value="Mersin">Mersin</option>
+      <option value="Diğer">Diğer</option>
+    </select>
+
+    <input type="date" class="form-control" placeholder="Doğum Tarihi" required>
+  </div>
+
+  <textarea rows="5" class="form-control" placeholder="Bize iletmek istediğiniz mesaj..." required></textarea>
+
+
+  <input type="submit" class="send-btn" value="Mesaj Gönder">
+</form>
+
+
+      <div>
+        <img src="resimler/iletişim.JPG" alt="İletişim Görseli">
+      </div>
+    </div>
+  </div>
+
+  <div class="map">
+  <iframe
+    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3112.8379080233262!2d35.4871621!3d38.7215303!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x152b12053c8ff3f9%3A0xc647d1b09ddad131!2sKayseri%20Cumhuriyet%20Meydan%C4%B1!5e0!3m2!1str!2str!4v1752265106121!5m2!1str!2str"
+    allowfullscreen=""
+    loading="lazy"
+    referrerpolicy="no-referrer-when-downgrade">
+  </iframe>
+</div>
+
+</section>
+
+
+       <!--! footer başlangıç-->
+    <footer class="modern-footer">
+      <div class="footer-wrapper">
+        <div class="footer-column">
+          <h3>🌱 Doğa Dostları</h3>
+          <p>
+            Daha yeşil bir dünya için gönüllülerle bir aradayız. Bilinçli
+            adımlar, sürdürülebilir gelecek demektir.
+          </p>
+        </div>
+
+        <div class="footer-column">
+          <h4>Menü</h4>
+          <ul>
+            <li><a href="index.html">Anasayfa</a></li>
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="haberler.html">Haberler</a></li>
+            <li><a href="etkinlikler.html">Etkinlikler</a></li>
+            <li><a href="hakkımızda.html">Hakkımızda</a></li>
+            <li><a href="iletisim.html">İletişim</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-column">
+          <h4>Sosyal Medya</h4>
+          <div class="footer-social">
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom-bar">
+        © 2025 Doğa Dostları. Tüm Hakları Saklıdır.
+      </div>
+    </footer>
+    <!--! footer bitiş-->
+
+    <button id="scrollTopBtn" title="Sayfanın en üstüne git">
+      <i class="fas fa-arrow-up"></i>
+    </button>
+    <script>
+    const contactFormElement = document.getElementById("contactForm");
+
+contactFormElement.addEventListener("submit", function (e) {
+  e.preventDefault();
+
+  if (!contactFormElement.checkValidity()) {
+    alert("Lütfen tüm gerekli alanları doğru doldurun.");
+    return;
+  }
+
+  alert("Mesajınız başarıyla gönderildi! Teşekkür ederiz. 🌿");
+
+  setTimeout(() => {
+    location.reload();
+  }, 1000);
+});
+      //!menü btn
+const menuBtn = document.querySelector('#menu-btn');
+const navbar = document.querySelector(".navbar");
+
+// Menü butonuna tıklayınca navbar aç/kapa
+menuBtn.addEventListener('click', (e) => {
+  e.stopPropagation(); // Tıklamanın document listener'a yayılmasını engelle
+  navbar.classList.toggle('active');
+});
+
+// Sayfaya herhangi bir yere tıklanınca
+document.addEventListener('click', (e) => {
+  // Eğer tıklama menü butonu veya navbar içinde değilse menüyü kapat
+  if (
+    !e.composedPath().includes(menuBtn) &&
+    !e.composedPath().includes(navbar)
+  ) {
+    navbar.classList.remove('active');
+  }
+});
+
+//!ok butonu
+// Sayfa scroll edildiğinde çalışır
+const scrollTopBtn = document.getElementById("scrollTopBtn");
+
+window.onscroll = function () {
+  if (
+    document.body.scrollTop > 300 ||
+    document.documentElement.scrollTop > 300
+  ) {
+    scrollTopBtn.classList.add("show"); // Butonu göster
+  } else {
+    scrollTopBtn.classList.remove("show"); // Butonu gizle
+  }
+};
+// Butona tıklandığında
+scrollTopBtn.addEventListener("click", function () {
+  window.scrollTo({
+    top: 0,
+    behavior: "smooth", // Yumuşak kaydırma
+  });
+});
+
+
+    </script>
+  </body>
+</html> 
