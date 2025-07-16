@@ -1,23 +1,54 @@
-# 🌟 Gelecek Hayalim - W-Code 2.0 Projem 🌈
+# 🌿 İklim Duyarlılığı Web Projesi
 
-## 👩‍💻 Proje Adı: İklim Duyarlılığı
+**Geliştirici:** Nafiye Çakı  
+**Program:** Gelecek Hayalim – W-Code 2.0 | Frontend Web Geliştirme Atölyesi
 
-Merhaba!  
-Ben bu projeyi **Gelecek Hayalim - W-Code 2.0 FRONTEND WEB GELİŞTİRME** atölyesi kapsamında yaptım. Projemi HTML, CSS ve JavaScript kullanarak tasarladım. 
+## 📌 Proje Tanımı
 
----
+Bu proje, “İklim Duyarlılığı” teması kapsamında geliştirilmiş, farkındalık odaklı bir web sitesidir.  
+Amaç, kullanıcıların çevresel konularda bilinçlenmesini sağlarken sade, modern ve etkileşimli bir arayüz sunmaktır.
+
+Proje, HTML, CSS ve JavaScript kullanılarak geliştirilmiştir. Sayfa yapısı ve içerikler, kullanıcı deneyimini ön planda tutacak şekilde yapılandırılmıştır.
+
+## 🌐 Sayfa Yapısı
+
+- **Anasayfa:** Projenin giriş ve tanıtım bölümü
+- **Blog:** Bilgilendirici yazılar ve içerikler  
+- **Etkinlikler:** Çevre ile ilgili etkinlik ve duyurular  
+- **Haberler:** İklim ve doğa temalı güncel haberler  
+- **İletişim:** Kullanıcı geri bildirimleri için form ve iletişim bilgileri  
+
+## 🛠️ Kullanılan Teknolojiler
+
+| Teknoloji      | Açıklama                                     |
+|----------------|----------------------------------------------|
+| HTML           | Sayfa iskeleti ve içerik yerleşimi          |
+| CSS            | Stil düzenlemeleri ve görsel tasarım         |
+| JavaScript     | Dinamik içerikler, sliderlar, etkileşimler   |
+| FontAwesome    | Simge ve ikon desteği                        |
+| Responsive Tasarım | Mobil uyumlu yapı                        |
+
+## 🎥 Tanıtım Videosu
+
+Proje tanıtım videosunu izlemek için:  
+🔗 [Proje Videosu (Google Drive)](https://drive.google.com/file/d/1ScfS-PD2e7marpC1J3pejUm359ucFNbN/view?usp=sharing)
+
+## ✨ Kazanımlar
+
+- Gerçek dünya konusuna uygun bir frontend proje geliştirme deneyimi  
+- Etkileşimli kullanıcı arayüzü oluşturma  
+- Web sayfası mimarisi tasarlama ve düzenleme  
+- Çevresel duyarlılık konularını teknolojiyle buluşturma  
+- Mobil uyumlu ve modern bir web tasarımı oluşturma  
+
+## 🙏 Teşekkür
+
+Bu projeyi geliştirme sürecinde bana ilham veren Gelecek Hayalim ekibine, mentorluk desteği sağlayan eğitmenlerime ve birlikte öğrenme fırsatı bulduğum tüm katılımcı arkadaşlarıma teşekkür ederim.
+
+> “Kodlarla çizilen her satır, daha duyarlı bir gelecek için atılmış bir adımdır.” 💚
 
 
-## 🔧 Kullanılan Teknolojiler
-
-- HTML5
-- CSS3
-- JavaScript
-- Görsel öğeler, ikonlar
-
----
-
-## 📷 Projemden Görüntüler
+## 📷 Projemden Bazı Görüntüler
 
 
 <img width="1902" height="1023" alt="Ekran görüntüsü 2025-07-16 012506" src="https://github.com/user-attachments/assets/a46c8480-2932-4a1f-bad3-35bd5cc55908" />
