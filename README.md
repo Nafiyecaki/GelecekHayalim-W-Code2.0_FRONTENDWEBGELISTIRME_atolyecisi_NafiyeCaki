@@ -15,7 +15,8 @@ Proje, HTML, CSS ve JavaScript kullanılarak geliştirilmiştir. Sayfa yapısı 
 - **Anasayfa:** Projenin giriş ve tanıtım bölümü
 - **Blog:** Bilgilendirici yazılar ve içerikler  
 - **Etkinlikler:** Çevre ile ilgili etkinlik ve duyurular  
-- **Haberler:** İklim ve doğa temalı güncel haberler  
+- **Haberler:** İklim ve doğa temalı güncel haberler
+- **Hakkımızda:** Projenin amacı, vizyonu ve geliştirici hakkında bilgi veren tanıtım sayfası  
 - **İletişim:** Kullanıcı geri bildirimleri için form ve iletişim bilgileri  
 
 ## 🛠️ Kullanılan Teknolojiler
