@@ -42,11 +42,8 @@ Proje tanıtım videosunu izlemek için:
 - Çevresel duyarlılık konularını teknolojiyle buluşturma  
 - Mobil uyumlu ve modern bir web tasarımı oluşturma  
 
-## 🙏 Teşekkür
-
 Bu projeyi geliştirme sürecinde bana ilham veren Gelecek Hayalim ekibine, mentorluk desteği sağlayan eğitmenlerime ve birlikte öğrenme fırsatı bulduğum tüm katılımcı arkadaşlarıma teşekkür ederim.
-
-> “Kodlarla çizilen her satır, daha duyarlı bir gelecek için atılmış bir adımdır.” 💚
+💚
 
 
 ## 📷 Projemden Bazı Görüntüler
