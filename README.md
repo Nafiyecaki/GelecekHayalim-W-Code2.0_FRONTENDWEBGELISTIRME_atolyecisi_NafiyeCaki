@@ -12,8 +12,8 @@ Ben bu projeyi **Gelecek Hayalim - W-Code 2.0 FRONTEND WEB GELİŞTİRME** atöl
 
 - HTML5
 - CSS3
-- JavaScript (varsa)
-- Görsel öğeler, ikonlar (isteğe bağlı)
+- JavaScript
+- Görsel öğeler, ikonlar
 
 ---
 
