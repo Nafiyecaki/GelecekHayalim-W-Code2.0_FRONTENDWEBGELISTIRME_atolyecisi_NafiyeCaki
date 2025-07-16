@@ -1,6 +1,5 @@
 # 🌿 İklim Duyarlılığı Web Projesi
 
-**Geliştirici:** Nafiye Çakı  
 **Program:** Gelecek Hayalim – W-Code 2.0 | Frontend Web Geliştirme Atölyesi
 
 ## 📌 Proje Tanımı
