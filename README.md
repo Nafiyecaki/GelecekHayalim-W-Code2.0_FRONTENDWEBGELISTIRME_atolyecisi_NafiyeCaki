@@ -1,55 +1,51 @@
-# 🌿 İklim Duyarlılığı Web Projesi
+# 🌿 Doğa Dostları – İklim Duyarlılığı Web Projesi
 
-**Program:** Gelecek Hayalim – W-Code 2.0 | Frontend Web Geliştirme Atölyesi
+**Program:** Gelecek Hayalim – W-Code 2.0 | Frontend Web Geliştirme Atölyesi  
 
 ## 📌 Proje Tanımı
 
-Bu proje, “İklim Duyarlılığı” teması kapsamında geliştirilmiş, farkındalık odaklı bir web sitesidir.  
-Amaç, kullanıcıların çevresel konularda bilinçlenmesini sağlarken sade, modern ve etkileşimli bir arayüz sunmaktır.
-
-Proje, HTML, CSS ve JavaScript kullanılarak geliştirilmiştir. Sayfa yapısı ve içerikler, kullanıcı deneyimini ön planda tutacak şekilde yapılandırılmıştır.
+**Doğa Dostları**, “İklim Duyarlılığı” temasıyla geliştirilen, çevre bilinci ve sürdürülebilir yaşam üzerine farkındalık oluşturmayı hedefleyen bir web projesidir.  
+HTML, CSS ve JavaScript teknolojileri kullanılarak hazırlanmış olup sade, modern ve mobil uyumlu bir arayüz sunar.
 
 ## 🌐 Sayfa Yapısı
 
-- **Anasayfa:** Projenin giriş ve tanıtım bölümü
-- **Blog:** Bilgilendirici yazılar ve içerikler  
-- **Etkinlikler:** Çevre ile ilgili etkinlik ve duyurular  
-- **Haberler:** İklim ve doğa temalı güncel haberler
-- **Hakkımızda:** Projenin amacı, vizyonu ve geliştirici hakkında bilgi veren tanıtım sayfası  
-- **İletişim:** Kullanıcı geri bildirimleri için form ve iletişim bilgileri  
+- **Anasayfa:** Projenin genel tanıtımı ve yönlendirme alanı  
+- **Blog:** İklim değişikliği, çevre dostu yaşam, geri dönüşüm konulu yazılar  
+- **Etkinlikler:** Doğa temalı kampanyalar ve gönüllülük etkinlikleri  
+- **Haberler:** Güncel çevre haberleri  
+- **Hakkımızda:** Projenin amacı, vizyonu ve geliştirici bilgileri  
+- **İletişim:** Geri bildirim formu ve iletişim bilgileri  
 
 ## 🛠️ Kullanılan Teknolojiler
 
-| Teknoloji      | Açıklama                                     |
-|----------------|----------------------------------------------|
-| HTML           | Sayfa iskeleti ve içerik yerleşimi          |
-| CSS            | Stil düzenlemeleri ve görsel tasarım         |
-| JavaScript     | Dinamik içerikler, sliderlar, etkileşimler   |
-| FontAwesome    | Simge ve ikon desteği                        |
-| Responsive Tasarım | Mobil uyumlu yapı                        |
+| Teknoloji         | Açıklama                                      |
+|-------------------|-----------------------------------------------|
+| HTML              | Sayfa iskeleti ve içerik yapısı               |
+| CSS               | Stil düzenlemeleri ve responsive tasarım      |
+| JavaScript        | Etkileşimli içerikler ve kullanıcı olayları   |
+| FontAwesome       | İkon ve simge kullanımı                       |
+| Responsive Design | Tüm cihazlarda uyumlu görünüm                 |
 
 ## 🎥 Tanıtım Videosu
 
-Proje tanıtım videosunu izlemek için:  
-🔗 [Proje Videosu (Google Drive)](https://drive.google.com/file/d/1ScfS-PD2e7marpC1J3pejUm359ucFNbN/view?usp=sharing)
+🔗 [Projeyi Tanıtan Kısa Video (Google Drive)](https://drive.google.com/file/d/1ScfS-PD2e7marpC1J3pejUm359ucFNbN/view?usp=sharing)
+
+## 📷 Projeden Görseller
+
+<img width="100%" alt="Ekran görüntüsü 1" src="https://github.com/user-attachments/assets/a46c8480-2932-4a1f-bad3-35bd5cc55908" />
+<img width="100%" alt="Ekran görüntüsü 2" src="https://github.com/user-attachments/assets/d0c796c2-47e1-46fc-bd32-b85fb0125d2f" />
+<img width="100%" alt="Ekran görüntüsü 3" src="https://github.com/user-attachments/assets/15222f91-38c1-4217-98e7-60e2aaf01b18" />
+<img width="100%" alt="Ekran görüntüsü 4" src="https://github.com/user-attachments/assets/03986a0c-0242-42ef-8341-e5a623e7f505" />
 
 ## ✨ Kazanımlar
 
-- Gerçek dünya konusuna uygun bir frontend proje geliştirme deneyimi  
-- Etkileşimli kullanıcı arayüzü oluşturma  
-- Web sayfası mimarisi tasarlama ve düzenleme  
-- Çevresel duyarlılık konularını teknolojiyle buluşturma  
-- Mobil uyumlu ve modern bir web tasarımı oluşturma  
+- Gerçek dünya temalı bir frontend proje geliştirme deneyimi  
+- HTML, CSS ve JavaScript ile etkileşimli bir web sitesi üretimi  
+- Duyarlı tasarım ve kullanıcı deneyimi odaklı geliştirme  
+- Çevresel farkındalık temalarını teknoloji ile harmanlama  
+- Proje geliştirme sürecinde takım çalışması ve mentorluk deneyimi
 
-Bu projeyi geliştirme sürecinde bana ilham veren Gelecek Hayalim ekibine, mentorluk desteği sağlayan eğitmenlerime ve birlikte öğrenme fırsatı bulduğum tüm katılımcı arkadaşlarıma teşekkür ederim.
-💚
+---
 
-
-## 📷 Projemden Bazı Görüntüler
-
-
-<img width="1902" height="1023" alt="Ekran görüntüsü 2025-07-16 012506" src="https://github.com/user-attachments/assets/a46c8480-2932-4a1f-bad3-35bd5cc55908" />
-<img width="1899" height="681" alt="Ekran görüntüsü 2025-07-16 012531" src="https://github.com/user-attachments/assets/d0c796c2-47e1-46fc-bd32-b85fb0125d2f" />
-<img width="1904" height="1021" alt="Ekran görüntüsü 2025-07-16 012609" src="https://github.com/user-attachments/assets/15222f91-38c1-4217-98e7-60e2aaf01b18" />
-<img width="1901" height="1027" alt="Ekran görüntüsü 2025-07-16 012620" src="https://github.com/user-attachments/assets/03986a0c-0242-42ef-8341-e5a623e7f505" />
-<img width="1873" height="994" alt="Ekran görüntüsü 2025-07-16 012642" src="https://github.com/user-attachments/assets/0026cc07-da1b-4b98-a5dc-dd60031e7887" />
+Bu projeyi geliştirirken hem doğaya olan bağlılığımı hem de web teknolojilerine ilgimi birleştirme fırsatı buldum.  
+Destekleri için **Gelecek Hayalim** ekibine, eğitmenlerime ve tüm ekip arkadaşlarıma teşekkür ederim. 💚
