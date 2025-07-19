@@ -47,5 +47,4 @@ HTML, CSS ve JavaScript teknolojileri kullanılarak hazırlanmış olup sade, mo
 
 ---
 
-Bu projeyi geliştirirken hem doğaya olan bağlılığımı hem de web teknolojilerine ilgimi birleştirme fırsatı buldum.  
-Destekleri için **Gelecek Hayalim** ekibine, eğitmenlerime ve tüm ekip arkadaşlarıma teşekkür ederim. 💚
+Bu projeyi geliştirme sürecinde bana ilham veren Gelecek Hayalim ekibine, mentorluk desteği sağlayan eğitmenlerime ve birlikte öğrenme fırsatı bulduğum tüm katılımcı arkadaşlarıma teşekkür ederim. 💚
