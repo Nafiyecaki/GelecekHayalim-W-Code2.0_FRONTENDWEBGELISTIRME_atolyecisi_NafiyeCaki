@@ -1,6 +1,6 @@
 # 🌿 Doğa Dostları – İklim Duyarlılığı Web Projesi
 
-**Program:** Gelecek Hayalim – W-Code 2.0 | Frontend Web Geliştirme Atölyesi  
+**Program:** Gelecek Hayalim – W-Code 2.0 Kodluyoruz | Frontend Web Geliştirme Atölyesi  
 
 ## 📌 Proje Tanımı
 
