@@ -28,9 +28,6 @@ HTML, CSS ve JavaScript teknolojileri kullanılarak hazırlanmış olup sade, mo
 
 
 
-Projeyi klonlamak için:
-git clone https://github.com/Nafiyecaki/GelecekHayalim-W-Code2.0_FRONTENDWEBGELISTIRME_atolyecisi_NafiyeCaki.git
-
 ## 🎥 Tanıtım Videosu
 
 🔗 [Projeyi Tanıtan Kısa Video (Google Drive)](https://drive.google.com/file/d/1ScfS-PD2e7marpC1J3pejUm359ucFNbN/view?usp=sharing)
